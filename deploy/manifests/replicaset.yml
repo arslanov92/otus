@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
         - name: otus
-          image: arslanov92/otus_homework:0.0.7
+          image: arslanov92/otus_homework:0.0.8
