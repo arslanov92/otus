@@ -1,8 +1,10 @@
 # нужно из корневой папки уйти в папку с манифестами
 cd deploy/manifests
 
+# создадим неймспейс
+kubectl create namespace m 
+
 # проапдейтить ингресс контроллер
-kubectl create namespace m \n
 helm install nginx ingress-nginx/ingress-nginx --namespace m -f nginx-ingress.yaml
 
 # зааплаить все манифесты 
