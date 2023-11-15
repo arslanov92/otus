@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: otus-pod
+  labels:
+    app: otus
+spec:
+  containers:
+    - name: otus
+      image: arslanov92/otus_homework:0.0.7
+      ports:
+        - containerPort: 8000
