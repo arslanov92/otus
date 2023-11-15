@@ -2,7 +2,7 @@
 cd deploy/manifests
 
 # проапдейтить ингресс контроллер
-kubectl create namespace m
+kubectl create namespace m \n
 helm install nginx ingress-nginx/ingress-nginx --namespace m -f nginx-ingress.yaml
 
 # зааплаить все манифесты 
