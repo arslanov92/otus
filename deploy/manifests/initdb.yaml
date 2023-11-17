@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "otus"
+spec:
+  template:
+    metadata:
+      name: "otus"
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: post-install-job
+        image: postgres:latest
+        env:
+          - name: POSTGRES_PASSWORD
+            value: "qwerty"
+        command:
+          - sh
+          - "-c"
+          - |
+            psql postgres://arslanov:qwerty@postgres-service/test <<'EOF'
+              create table client (id bigint primary key, name varchar);
+                insert into client (id, name) values (1, 'Konstantin');
+            EOF
+
+  backoffLimit: 0
+
