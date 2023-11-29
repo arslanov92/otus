@@ -19,8 +19,8 @@ spec:
           - "-c"
           - |
             psql postgres://arslanov:qwerty@postgres-service/test <<'EOF'
-              create table client (id bigint primary key, name varchar);
-                insert into client (id, name) values (1, 'Konstantin');
+              create table client (id serial primary key, firstname varchar, lastname varchar);
+                insert into client (firstname, lastname) values ('Konstantin', 'Kolyshkov');
             EOF
 
   backoffLimit: 0
