@@ -1,2 +1,11 @@
 server:
     port: 8000
+spring:
+  datasource:
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    driverClassName: "org.postgresql.Driver"
+#    username: arslanov
+#    password: qwerty
+#    url: jdbc:postgresql://192.168.105.30:31651/test

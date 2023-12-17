@@ -199,7 +199,7 @@ You do not need to configure (and you can't, currently) the MAC address of `sock
 
 ### Bridged mode
 
-See [`./launchd/io.github.lima-vm.socket_vmnet.bridged.en0.plist`](./launchd/io.github.lima-vm.socket_vmnet.bridged.en0.plist).
+See [`./launchd/io.github.lima-vm.socket_vmnet.bridged.en0.plist`](launchd/io.github.lima-vm.socket_vmnet.bridged.en0.plist).
 
 Install:
 ```bash
@@ -239,7 +239,7 @@ Yes, but discouraged, as it allows non-root users to write arbitrary files, by s
 
 Instead, consider using launchd or sudo.
 
-See [`./etc_sudoers.d/socket_vmnet`](./etc_sudoers.d/socket_vmnet) to allow running `sudo socket_vmnet` with reduced set of args and environment variables.
+See [`./etc_sudoers.d/socket_vmnet`](etc_sudoers.d/socket_vmnet) to allow running `sudo socket_vmnet` with reduced set of args and environment variables.
 
 ### How is socket_vmnet related to vde_vmnet?
 

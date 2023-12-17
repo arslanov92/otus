@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "373e1e2d-4c40-4543-bb79-a9ac7510de96",
+		"name": "homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7371186"
+	},
+	"item": [
+		{
+			"name": "status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/otus/health",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"otus",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Marat\",\n    \"lastname\": \"Arslanov\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/otus/client",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"otus",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/otus/client/all",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"otus",
+						"client",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/otus/client?id=2",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"otus",
+						"client"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByFirstnameAndLastname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/otus/client?firstname=Marat&lastname=Arslanov",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"otus",
+						"client"
+					],
+					"query": [
+						{
+							"key": "firstname",
+							"value": "Marat"
+						},
+						{
+							"key": "lastname",
+							"value": "Arslanov"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
