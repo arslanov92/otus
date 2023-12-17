@@ -1,0 +1,6 @@
+postgres:
+ url: "postgres-service"
+ port: "5432"
+ db: "test"
+ user: "YXJzbGFub3Y="
+ password: "cXdlcnR5"

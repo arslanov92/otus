@@ -8,8 +8,8 @@ spec:
   type: NodePort
   ports:
     - protocol: TCP
-      port: 5432
-      targetPort: 5432
+      port: {{ .Values.postgres.port }}
+      targetPort: {{ .Values.postgres.port }}
   selector:
     app: postgres
 
@@ -33,7 +33,7 @@ spec:
       - name: postgres
         image: postgres:latest
         ports:
-        - containerPort: 5432
+        - containerPort: {{ .Values.postgres.port }}
           name: postgredb
         volumeMounts:
         - name: postgredb

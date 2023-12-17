@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+data:
+  postgres-url: "{{ .Values.postgres.url }}"
+  postgres-port: "{{ .Values.postgres.port }}"
+  postgres-db: "{{ .Values.postgres.db }}"
