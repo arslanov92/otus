@@ -19,7 +19,9 @@ kubectl get all
 kubectl apply -f initdb.yaml
 
 # создадим ингресс контроллер
-kubectl create namespace m
+kubectl create namespace m 
+
+
 helm install nginx ingress-nginx/ingress-nginx --namespace m -f nginx-ingress.yaml
 
 # задеплоим приложение
